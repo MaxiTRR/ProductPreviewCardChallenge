@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Roboto:wght@300;400;700;900&display=swap');
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    font-size: 14px;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+}
+
+.container{
+    max-width:720px;
+    margin-bottom: 30px auto;
+    padding: 0 30px;
+    
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    align-self: center;
+}
+
+.card__image img{
+    max-width: 100%;
+    display: inherit;
+}
+
+.card__text{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.card__product-type{
+    font-size: 14px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+}
+
+.card__product-name{
+    font-size: 34px;
+    color: hsl(212, 21%, 14%);
+}
+
+.card_product-details{
+    line-height:25px;
+    color: hsl(228, 12%, 48%);
+}
+
+.card__price{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__price-current{
+    font-size: 34px;
+    color: hsl(158, 36%, 37%);
+}
+
+.card__price-old{
+    text-decoration: line-through;
+}
+
+.card__button{
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    border-style: none;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.card__button:hover{
+    background-color:hsl(159, 33%, 22%);
+}
+
+/*Media Querys*/
+
+@media (max-width: 584px) {
+    .container{
+        max-width: 375px;
+        padding: 15px;
+    }
+    
+    .card{
+        grid-template-columns: 1fr;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .card__image img{
+        width: 100%;
+        max-height: 270px;
+        object-fit: cover;
+    }
+
+    .card__text{
+        gap: 15px;
+    }
+
+}
